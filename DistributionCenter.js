@@ -3,6 +3,7 @@ const Node = require('./node.js');
 const Node = require('./linkedlist.js')
 const Node = require('./queue.js');
 const Node = require('./product.js');
+const Node = require('./truck.js')
 
 function configureWareHouse(numberofitems){
     let Warehouse = new Queue();

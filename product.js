@@ -1,9 +1,9 @@
 const Product = function(){
 
-let name = n;
-let price = p;
-let space = s;
-let prime = pr;
+let name = makeName();
+let price = makePrice();
+let space = makePrice();
+let prime = Prime();
 
   function makeName(){
     for(let x=0;x<10;x++){
@@ -15,9 +15,19 @@ let prime = pr;
   }
   function makePrice(){
     for(let x=0;x<10;x++){
-      let price = Math.floor(Math.random)
+      let price = Math.floor(Math.random()*10000/100);
+      let space = Math.floor(Math.random()*10000/100);
     }
   }
+  function Prime(){
+        let randomNumber = Math.random()*100;
+        if(randomNumber > 50){
+             prime = true;
+       }
+       else{
+             prime = false;
+       }
+ }
 
-
+ return{name,price,space,prime}
 }
