@@ -3,7 +3,7 @@ const Product = function(){
 let name = makeName();
 let price = makePrice();
 let space = makePrice();
-let prime = Prime();
+this.prime = Prime();
 
   function makeName(){
     for(let x=0;x<10;x++){
@@ -22,12 +22,14 @@ let prime = Prime();
   function Prime(){
         let randomNumber = Math.random()*100;
         if(randomNumber > 50){
-             prime = true;
+             this.prime = true;
        }
        else{
-             prime = false;
+             this.prime = false;
        }
  }
 
- return{name,price,space,prime}
+ return{name,price,space}
 }
+
+module.exports = Product;

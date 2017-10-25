@@ -19,7 +19,7 @@ const Truck = function(size){
                   console.log("What size?");
             }
       }
-      function makeSpaceEfficency(){
+      function spaceEfficency(){
             let sum = 0
             let len = inventory.length;
             for(let x=0;x<inventory.length;x++){
@@ -28,6 +28,6 @@ const Truck = function(size){
             }
             return sum /capacity;
       }
-      return{type,inventory,capacity,spaceEfficiency}
+      return{type,inventory,capacity,spaceEfficency}
 }
 module.exports = Truck;
